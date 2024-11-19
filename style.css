@@ -11,3 +11,14 @@
     background-position: center;
     background-size: cover;
 }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 12%;
+}
+
+.logo {
+    width: 150px;
+    cursor: pointer;
+}
