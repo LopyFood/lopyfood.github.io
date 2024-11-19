@@ -10,6 +10,9 @@
     background: linear-gradient(rgb(255, 255, 255),rgba(255, 117, 182, 0.993));
     background-position: center;
     background-size: cover;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
 }
 
 .navbar {
@@ -21,4 +24,22 @@
 .logo {
     width: 150px;
     cursor: pointer;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+    margin-right: 60px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 50px;
+    font-size: 2em;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FF77B7;
 }
