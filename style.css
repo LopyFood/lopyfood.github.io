@@ -94,9 +94,9 @@ h5 span {
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    
     background-position: center;
     background-size: cover;
+    transition: transform 0.5s;
 }
 
 .card1 {
@@ -105,4 +105,8 @@ h5 span {
 
 .card2 {
     background-image: url(img/pangsit.jpeg);
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
