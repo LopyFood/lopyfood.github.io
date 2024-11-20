@@ -1,7 +1,16 @@
+:root {
+    --primary: #ffff;
+    --bg: #FF77B7;
+}
+
 * {
     margin: 0;
     padding: 0;
     font-family: "Edu AU VIC WA NT Pre", cursive;
+}
+
+body {
+    overflow: hidden;
 }
 
 .container {
@@ -51,4 +60,49 @@ nav ul li a {
     top: 32px;
     right: 64px;
     cursor: pointer;
+}
+
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    display: grid;
+    grid-template-columns: 50px, 50px, 50px;
+    gap: 5px;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    grid-auto-flow: column;
+}
+h5 {
+    color: #ffff;
+}
+
+h5 span {
+    color: var(--bg);
+}
+
+.card {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    
+    background-position: center;
+    background-size: cover;
+}
+
+.card1 {
+    background-image: url(img/mentai.jpeg);
+}
+
+.card2 {
+    background-image: url(img/pangsit.jpeg);
 }
