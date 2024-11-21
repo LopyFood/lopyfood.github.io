@@ -87,7 +87,7 @@ h5 span {
     color: var(--bg);
 }
 
-.card {
+.card, img{
     width: 100%;
     max-width: 200px;
     height: 230px;
