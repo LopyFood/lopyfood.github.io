@@ -110,11 +110,20 @@ h5 span {
 }
 
 .card3 {
-    background-image: url(img/m.jpeg);
+    background-image: url(img/l.jpg);
 }
 
 .card4 {
+    background-image: url(img/c.jpg);
+}
+.card5 {
     background-image: url(img/s.jpeg);
+}
+.card6 {
+    background-image: url(img/m.jpeg);
+}
+.card7 {
+    background-image: url(img/kl.jpg);
 }
 
 .card:hover {
