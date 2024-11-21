@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap');
+
 :root {
     --primary: #ffff;
     --bg: #FF77B7;
@@ -6,22 +8,21 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Edu AU VIC WA NT Pre", cursive;
 }
 
-body {
-    overflow: hidden;
-}
 
 .container {
     width: 100%;
-    height: 100vh;
-    background: linear-gradient(rgb(255, 255, 255),rgba(255, 117, 182, 0.993));
+    height: 100%;
+    background: linear-gradient(rgb(255, 255, 255), rgb(255, 119, 183));
     background-position: center;
     background-size: cover;
     padding-left: 8%;
     padding-right: 8%;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .navbar {
@@ -63,19 +64,20 @@ nav ul li a {
 }
 
 .row {
-    display: flex;
+    display: inline-block;
     height: 88%;
     align-items: center;
+    
 }
 
 .col {
-    display: grid;
-    grid-template-columns: 50px, 50px, 50px;
-    gap: 5px;
-    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    gap: 2rem;
+    padding: 12em;
     align-items: center;
-    justify-content: center;
-    grid-auto-flow: column;
+    justify-content: flex-start;
 }
 h5 {
     color: #ffff;
@@ -86,14 +88,14 @@ h5 span {
 }
 
 .card {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: 230px;
-    display: inline-block;
     border-radius: 10px;
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
-    margin: 10px 15px;
+    margin: 10px;
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
@@ -107,6 +109,51 @@ h5 span {
     background-image: url(img/pangsit.jpeg);
 }
 
+.card3 {
+    background-image: url(img/m.jpeg);
+}
+
+.card4 {
+    background-image: url(img/s.jpeg);
+}
+
 .card:hover {
     transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    nav ul li {
+        margin-left: 20px;
+        font-size: 1.5em;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    .col {
+        grid-template-columns: 1fr; /* Satu kolom */
+        padding: 10px;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 200px;
+        height: auto; /* Biarkan tinggi menyesuaikan konten */
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li {
+        font-size: 1.2em;
+    }
+
+    .card {
+        height: 200px; /* Adjust card height for smaller screens */
+    }
 }
