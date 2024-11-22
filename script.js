@@ -32,11 +32,11 @@ function updateCart() {
         total += itemTotal;
 
         const cartItem = document.createElement("li");
-        cartItem.innerText = `${item.name} - Rp ${(item.price * 1000)} x ${item.quantity} = Rp ${(itemTotal * 1000)}`;
+        cartItem.innerText = `${item.name} - Rp ${(item.price.toLocaleString('id-ID'))} x ${item.quantity} = Rp ${(itemTotal.toLocaleString('id-ID'))}`;
         cartItemsContainer.appendChild(cartItem);
     });
 
-    totalPriceElement.innerText = `Total Harga: Rp ${(total * 1000)}`;
+    totalPriceElement.innerText = `Total Harga: Rp ${(total.toLocaleString('id-ID'))}`;
 }
 
 function checkout() {
@@ -51,10 +51,12 @@ function checkout() {
 
     let orderSummary = "Ringkasan Pesanan:\n";
     cart.forEach(item => {
-        orderSummary += `${item.name} x ${item.quantity} - Rp ${((item.price * 1000) * item.quantity)}\n`;
+        const itemTotal = item.price * item.quantity;
+        orderSummary += `${item.name} x ${item.quantity} - Rp ${itemTotal.toLocaleString('id-ID')}\n`;
     });
 
-    orderSummary += `\nTotal: Rp ${cart.reduce((acc, item) => acc + ((item.price * 1000) * item.quantity), 0)}`;
+    const total = cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+    orderSummary += `\nTotal: Rp ${total.toLocaleString('id-ID')}`;
     //alert(orderSummary);
     Swal.fire({
         icon: "success",  //success,warning,info,question
