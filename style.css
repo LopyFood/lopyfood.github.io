@@ -74,15 +74,6 @@ nav ul li a {
 
 }
 
-.custom-svg {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 32px;
-    right: 64px;
-    cursor: pointer;
-}
-
 .row {
     display: inline-block;
     height: 88%;
