@@ -42,6 +42,10 @@
     margin: 5.5px;
 }
 
+.navbar .navbar-extra a:hover {
+    color:  #C13584;
+}
+
 .logo {
     width: 300px;
     height: 100px;
@@ -71,11 +75,21 @@ nav ul li a {
     text-decoration: none;
     color: #FF77B7;
     font-size: 1.6rem;
+    background-color: #bd1875;
+    border-radius: 7px;
 
 }
 
+nav ul li a:hover {
+    color: #C13584;
+    background-color: #FF77B7;
+    
+}
+
+/* Produk CSS */
+
 .row {
-    display: inline-block;
+    display: flex;
     height: 88%;
     align-items: center;
     
@@ -99,14 +113,14 @@ h5 span {
 }
 
 .card, img{
-    width: 100%;
-    max-width: 200px;
+    width: 200px;
     height: 230px;
+    display: inline-block;
     border-radius: 10px;
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
-    margin: 10px;
+    margin: 10px 15px;
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
