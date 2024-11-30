@@ -142,6 +142,11 @@ nav ul li a:hover {
     color: #C13584;
 }
 
+.cart ul {
+    position: relative;
+    flex-direction: column;
+}
+
 /* Produk CSS */
 
 .row {
@@ -216,6 +221,7 @@ h5 span {
 .card:hover {
     transform: translateY(-10px);
 }
+
 
 @media (max-width: 768px) {
     .row {
