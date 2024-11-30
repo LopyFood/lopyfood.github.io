@@ -217,11 +217,27 @@ h5 span {
 .card7 {
     background-image: url(img/kl.jpg);
 }
+.card8 {
+    background-image: url(img/cabe.jpg);
+}
 
 .card:hover {
     transform: translateY(-10px);
 }
 
+.footer {
+    height: 10vh;
+    padding: 20px;
+    background: linear-gradient(rgba(255, 119, 183), rgba(255, 255, 255));
+    color: var(--primary);
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+.footer p span {
+    color: var(--bg);
+    font-size: 1.6rem;
+}
 
 @media (max-width: 768px) {
     .row {
