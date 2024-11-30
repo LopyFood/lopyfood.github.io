@@ -39,6 +39,22 @@ function updateCart() {
     totalPriceElement.innerText = `Total Harga: Rp ${(total.toLocaleString('id-ID'))}`;
 }
 
+// toggle class aktif shopping-cart
+const shoppingCart = document.querySelector('.shopping-cart');
+document.querySelector('#shopping-cart-button').onclick = (e) => {
+    shoppingCart.classList.toggle('active');
+    e.preventDefault();
+}
+
+// klik di luar elemen
+const sc = document.querySelector('#shopping-cart-button');
+
+document.addEventListener('click', function (e) {
+    if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
+        shoppingCart.classList.remove('active');
+}
+});
+
 function checkout() {
     if (cart.length === 0) {
         Swal.fire({
