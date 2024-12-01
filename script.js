@@ -65,7 +65,7 @@ function checkout() {
         return;
     }
 
-    let orderSummary = "Ringkasan Pesanan:\n";
+    let orderSummary = "Halo, saya ingin memesan:\n";
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         orderSummary += `${item.name} x ${item.quantity} - Rp ${itemTotal.toLocaleString('id-ID')}\n`;
@@ -75,16 +75,29 @@ function checkout() {
     orderSummary += `\nTotal: Rp ${total.toLocaleString('id-ID')}`;
     //alert(orderSummary);
     Swal.fire({
-        icon: "success",  //success,warning,info,question
-        title: "Checkout",
-        text: orderSummary,
+        icon: "success",
+        title: "Checkout Berhasil",
+        text: "Anda akan dialihkan ke WhatsApp untuk menyelesaikan pesanan.",
+        showCancelButton: true,
+        confirmButtonText: "Lanjut ke WhatsApp",
+        cancelButtonText: "Batal",
     }).then((result) => {
         if (result.isConfirmed) {
-            
-            window.location.href = ""; // Mengalihkan ke halaman payment
+            // Encode pesan untuk digunakan di URL WhatsApp
+            const encodedMessage = encodeURIComponent(orderSummary);
+
+            // Ganti nomor berikut dengan nomor WhatsApp tujuan
+            const whatsappNumber = "6289637454341"; // Format: 62 untuk Indonesia
+
+            // Buat URL WhatsApp
+            const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Redirect ke WhatsApp
+            window.location.href = whatsappURL;
+
+            // Reset keranjang setelah berhasil checkout
+            cart = [];
+            updateCart();
         }
     });
-
-    cart = [];
-    updateCart();
 }

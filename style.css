@@ -92,8 +92,8 @@ nav ul li a:hover {
 
 .shopping-cart {
     position: absolute;
+    display: none;
     top: 100%;
-    right: -100%;
     height: 100vh;
     width: 35rem;
     padding: 0 1.5rem;
@@ -105,6 +105,7 @@ nav ul li a:hover {
 
 .shopping-cart.active {
     right: -10%;
+    display: block;
 }
 
 .shopping-cart .cart-items {
@@ -145,6 +146,13 @@ nav ul li a:hover {
 .cart ul {
     position: relative;
     flex-direction: column;
+}
+
+button {
+    background-color: #f70cb0;
+    border-radius: 8px;
+    color: #ffff;
+    cursor: pointer;
 }
 
 /* Produk CSS */
@@ -239,6 +247,14 @@ h5 span {
     font-size: 1.3rem;
 }
 
+/* alert */
+.swal2-container {
+    z-index: 9999; /* Pastikan z-index lebih tinggi dari elemen lain */
+}
+.swal1-container {
+    z-index: 9999; /* Pastikan z-index lebih tinggi dari elemen lain */
+}
+
 @media (max-width: 768px) {
     .row {
         margin-top: 20px;
@@ -290,7 +306,6 @@ h5 span {
 
     .shopping-cart {
         width: 95%; /* Lebar cart lebih besar di layar sangat kecil */
-        right: -200%; /* Sesuaikan posisi */
         height: fit-content;
     }
 
