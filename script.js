@@ -85,9 +85,7 @@ function checkout() {
         if (result.isConfirmed) {
             // Encode pesan untuk digunakan di URL WhatsApp
             const encodedMessage = encodeURIComponent(orderSummary);
-
-            // Ganti nomor berikut dengan nomor WhatsApp tujuan
-            const whatsappNumber = "6289637454341"; // Format: 62 untuk Indonesia
+            const whatsappNumber = "6289637454341";
 
             // Buat URL WhatsApp
             const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;

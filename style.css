@@ -100,12 +100,12 @@ nav ul li a:hover {
     background-color: #ffffff10;
     color: var(--bg);
     backdrop-filter: blur(5px);
-    transition: 0.3s;
 }
 
 .shopping-cart.active {
     right: -10%;
     display: block;
+    transition: 0.5s;
 }
 
 .shopping-cart .cart-items {
@@ -249,10 +249,10 @@ h5 span {
 
 /* alert */
 .swal2-container {
-    z-index: 9999; /* Pastikan z-index lebih tinggi dari elemen lain */
+    z-index: 9999; 
 }
 .swal1-container {
-    z-index: 9999; /* Pastikan z-index lebih tinggi dari elemen lain */
+    z-index: 9999; 
 }
 
 @media (max-width: 768px) {
