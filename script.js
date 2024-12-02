@@ -22,14 +22,17 @@ function addToCart(name, price) {
 function updateCart() {
     const cartItemsContainer = document.getElementById("cart-items");
     const totalPriceElement = document.getElementById("total-price");
+    const cartCountElement = document.getElementById("cart-count");
 
     // Bersihkan tampilan keranjang sebelum menambah item baru
     cartItemsContainer.innerHTML = "";
 
     let total = 0;
+    let totalQuantity = 0; // Variabel untuk menghitung total jumlah item
     cart.forEach(item => {
         const itemTotal = item.price * item.quantity;
         total += itemTotal;
+        totalQuantity += item.quantity; // Tambahkan jumlah item
 
         const cartItem = document.createElement("li");
         cartItem.innerText = `${item.name} - Rp ${(item.price.toLocaleString('id-ID'))} x ${item.quantity} = Rp ${(itemTotal.toLocaleString('id-ID'))}`;
@@ -37,6 +40,14 @@ function updateCart() {
     });
 
     totalPriceElement.innerText = `Total Harga: Rp ${(total.toLocaleString('id-ID'))}`;
+    
+    // Perbarui jumlah item di ikon shopping-cart
+    if (totalQuantity > 0) {
+        cartCountElement.innerText = totalQuantity;
+        cartCountElement.style.display = 'inline'; // Tampilkan elemen
+    } else {
+        cartCountElement.style.display = 'none'; // Sembunyikan elemen
+    }
 }
 
 // toggle class aktif shopping-cart

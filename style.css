@@ -108,7 +108,7 @@ nav ul li a:hover {
     transition: 0.5s;
 }
 
-.shopping-cart .cart-items {
+/* .shopping-cart .cart-items {
     margin: 2rem 0;
     display: flex;
     align-items: center;
@@ -141,7 +141,7 @@ nav ul li a:hover {
 
 .shopping-cart .remove:hover {
     color: #C13584;
-}
+} */
 
 .cart ul {
     position: relative;
@@ -153,6 +153,28 @@ button {
     border-radius: 8px;
     color: #ffff;
     cursor: pointer;
+}
+
+.shopping-cart-icon {
+    position: relative;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: #C13584;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    
 }
 
 /* Produk CSS */
