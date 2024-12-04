@@ -29,28 +29,32 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: relative;
+    position: fixed;
+    width: 80%;
     height: 12%;
     z-index: 9999;
+    backdrop-filter: blur(5px);
 }
 
-.navbar .navbar-extra {
+.navbar-extra {
     display: flex;
     align-items: center;
 }
 
-.navbar .navbar-extra a {
+.navbar-extra a {
     color: rgb(255, 119, 183);
     margin: 5.5px;
+    justify-content: center;
 }
 
 .navbar .navbar-extra a:hover {
     color:  #C13584;
 }
 
-.navbar .logo img{
+.logo img{
     width: 300px;
     height: 200px;
+    margin-top: 80px;
     cursor: pointer;
 }
 
@@ -59,7 +63,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    
 }
 
 nav ul {
@@ -195,7 +198,7 @@ button:hover {
     display: flex;
     height: 88%;
     align-items: center;
-    margin-top: -150px;
+    margin-top: -50px;
 }
 
 .col {
@@ -325,8 +328,11 @@ h5 span {
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        height: fit-content;
+    }
     .row {
-        margin-top: 20px;
+        margin-top: 350px;
     }
 
     nav ul li {
