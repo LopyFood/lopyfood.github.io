@@ -105,7 +105,7 @@ nav ul li a:hover {
 }
 
 .shopping-cart.active {
-    right: -10%;
+    right: -15%;
     display: block;
     transition: 0.5s;
 }
@@ -330,6 +330,7 @@ h5 span {
 @media (max-width: 480px) {
     .navbar {
         height: fit-content;
+        margin-top: -20%;
     }
     .row {
         margin-top: 350px;
@@ -354,7 +355,7 @@ h5 span {
     #cart-items {
         flex-direction: column; /* Susun item secara vertikal */
         align-items: flex-start; /* Rata kiri */
-        font-size: 10px;
+        font-size: 11px;
     }
 
     .cart-items img {
