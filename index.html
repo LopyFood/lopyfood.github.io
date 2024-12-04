@@ -7,6 +7,7 @@
     <title>LopyFood</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://cdn.consentmanager.net/trackless/delivery/a2982062f4e4.js" async
         type="text/javascript"></script>
@@ -16,15 +17,6 @@
         data-cmp-codesrc="16"></script>
     <meta name="google-site-verification" content="mNG0KUPmD156_55GKpX6to3a3jy6OcBs6EZ4WHWRYrE" />
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXJWR9EDTV"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'G-KXJWR9EDTV');
-</script>
 
 <body>
     <div class="container">
@@ -37,12 +29,11 @@
                     <li><a href="https://lopyfood.id.biz.id/review/">Review</a></li>
                 </ul>
                 <div class="navbar-extra">
-                    <a href="https://www.instagram.com/lopy.food/" class="ig" id="instagram"><i
-                            data-feather="instagram"></i></a>
-                            <div class="shopping-cart-icon">
-                                <span id="cart-count" style="display: none;">0</span>
-                                <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
-                            </div>
+
+                    <div class="shopping-cart-icon">
+                        <span id="cart-count" style="display: none;">0</span>
+                        <a href="#" id="shopping-cart-button"><i data-feather="shopping-cart"></i></a>
+                    </div>
                 </div>
                 <!-- shopping Cart Mulai -->
                 <div class="shopping-cart">
@@ -138,15 +129,31 @@
             </div>
         </div>
     </div>
-
+    <footer class="footer">
+        <div class="sosmed">
+            <h3 class="ba">Contact<span>Us</span></h3>
+            <a href="https://www.instagram.com/lopy.food/" class="ig" id="instagram"><i data-feather="instagram"></i>
+            </a>
+            <a href="https://wa.me/6289523744749">
+                <i class="ri-whatsapp-line"></i>
+            </a>
+        </div>
+        <p>&copy; 2024 LOPYFOOD. <span>- All rights reserved.</span></p>
+    </footer>
 
     <script src="script.js" type="module"></script>
     <script>
         feather.replace();
     </script>
-    <footer class="footer">
-        <p>&copy; 2024 LOPYFOOD. <span>- All rights reserved.</span></p>
-    </footer>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KXJWR9EDTV"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-KXJWR9EDTV');
+    </script>
 </body>
 
 </html>
