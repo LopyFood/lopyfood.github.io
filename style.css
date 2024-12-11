@@ -192,14 +192,12 @@ button:hover {
     
 }
 
+
 .item-btn {
+    margin-left: 5px;
     background-color: red;
     width: 40px;
     height: 30px;
-    display: inline-block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
 }
 
 /* deskripsi css */

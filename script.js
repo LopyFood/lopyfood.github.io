@@ -90,9 +90,10 @@ document.querySelector('#shopping-cart-button').onclick = (e) => {
 
 // klik di luar elemen
 const sc = document.querySelector('#shopping-cart-button');
+const btn = document.querySelector('.item-btn')
 
 document.addEventListener('click', function (e) {
-    if (!sc.contains(e.target) && !shoppingCart.contains(e.target)) {
+    if (!sc.contains(e.target) && !shoppingCart.contains(e.target) && !btn.contains(e.target)) {
         shoppingCart.classList.remove('active');
 }
 });
