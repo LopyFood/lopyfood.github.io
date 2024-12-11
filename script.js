@@ -36,6 +36,26 @@ function updateCart() {
 
         const cartItem = document.createElement("li");
         cartItem.innerText = `${item.name} - Rp ${(item.price.toLocaleString('id-ID'))} x ${item.quantity} = Rp ${(itemTotal.toLocaleString('id-ID'))}`;
+
+        // Buat tombol +
+        const plusButton = document.createElement("button");
+        plusButton.innerText = "+";
+        plusButton.classList.add("item-btn");
+        plusButton.onclick = () => {
+            addToCart(item.name, item.price); // Tambah item
+        };
+
+        // Buat tombol -
+        const minusButton = document.createElement("button");
+        minusButton.innerText = "-";
+        minusButton.classList.add("item-btn");
+        minusButton.onclick = () => {
+            removeFromCart(item.name); // Hapus item
+        };
+
+        // Tambahkan tombol ke item
+        cartItem.appendChild(minusButton);
+        cartItem.appendChild(plusButton);
         cartItemsContainer.appendChild(cartItem);
     });
 
@@ -48,6 +68,17 @@ function updateCart() {
     } else {
         cartCountElement.style.display = 'none'; // Sembunyikan elemen
     }
+}
+
+function removeFromCart(name) {
+    const itemIndex = cart.findIndex(item => item.name === name);
+    if (itemIndex !== -1) {
+        cart[itemIndex].quantity -= 1;
+        if (cart[itemIndex].quantity === 0) {
+            cart.splice(itemIndex, 1); // Hapus item jika jumlahnya 0
+        }
+    }
+    updateCart();
 }
 
 // toggle class aktif shopping-cart
