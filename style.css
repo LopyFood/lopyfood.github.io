@@ -91,6 +91,22 @@ nav ul li a:hover {
 
 }
 
+.navbar.scrolled {
+    padding: 10px 40px;
+    /* Mengecilkan padding saat scroll */
+    transform: translateY(-10px);
+    /* Menggeser header ke atas */
+    background: rgba(255, 255, 255, 0.8);
+    /* Mengubah background agar lebih solid saat scroll */
+}
+
+.navbar.hide {
+    transform: translateY(-100%);
+    /* Menggeser header keluar layar */
+    opacity: 0;
+    /* Menyembunyikan header dengan mengurangi opacity */
+}
+
 /* shopping cart */
 
 .shopping-cart {
